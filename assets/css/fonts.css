@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@font-face {
+    font-family: 'avant-g-book';
+    src: url('@/assets/fonts/avant-g-book.ttf');
+}
+
+@font-face {
+    font-family: 'avant-g-medium';
+    src: url('@/assets/fonts/avant-g-medium.ttf');
+}
+
+@font-face {
+    font-family: 'avant-garde-gothic-2-bold-1';
+    src: url('@/assets/fonts/avant-garde-gothic-2-bold-1.otf.ttf');
+}
+
+.icon {
+    font-family: 'Material Icons';
+}
+
+* {
+    color: white;
+}
+
+.ag-book {
+    font-family: 'avant-g-book';
+}
+
+.ag-medium {
+    font-family: 'avant-g-medium';
+}
+
+.ag-bold {
+    font-family: 'avant-garde-gothic-2-bold-1';
+}
