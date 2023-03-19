@@ -1,11 +1,14 @@
 <template>
     <div class="menuBackdrop absolute centered" @click="menuIsOpen = false">
-        <div class="menuBox relative flex column justifyCenter alignCenter gap20" @click.stop>
+        <div class="menuBox relative flex column justifyBetween alignCenter gap20" @click.stop>
             <MenuLanguageBox />
 
-            <NuxtLink to="/agenda" @click.stop="menuIsOpen = false">{{ menuTabs.agenda[language] }}</NuxtLink>
-            <NuxtLink to="/projets" @click.stop="menuIsOpen = false">{{ menuTabs.projects[language] }}</NuxtLink>
-            <NuxtLink to="/formations" @click.stop="menuIsOpen = false">{{ menuTabs.teams[language] }}</NuxtLink>
+            <div class="linkBox flex column alignCenter justifyCenter gap20">
+                <NuxtLink to="/agenda" @click.stop="menuIsOpen = false">{{ menuTabs.agenda[language] }}</NuxtLink>
+                <NuxtLink to="/projets" @click.stop="menuIsOpen = false">{{ menuTabs.projects[language] }}</NuxtLink>
+                <NuxtLink to="/formations" @click.stop="menuIsOpen = false">{{ menuTabs.teams[language] }}</NuxtLink>
+            </div>
+            <div class="decoy"></div>
 
             <span class="icon closeIcon absolute top0 right0 pointer" @click="menuIsOpen = false">close</span>
         </div>
@@ -34,15 +37,16 @@ const language = useLanguage()
 .menuBox {
     width: 400px;
     height: 400px;
+    padding: 10px;
     background-color: black;
     margin: auto;
     border-radius: 5px;
     top: 0%;
     right: 0%;
-    /* transform: translate(0%, 00%); */
-    
 }
-
+.linkBox a {
+    font-size: 24px;
+}
 .closeIcon {
     font-size: 40px;
     font-weight: 100;

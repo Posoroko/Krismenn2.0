@@ -19,10 +19,12 @@ function toggleLanguage(e) {
 
 <style scoped>
 .langBtn {
-    font-size: 10px;
+    color: rgb(120, 120, 120);
+    font-size: 12px;
 }
 
 .activeLangBtn {
-    border-bottom: 1px solid white;
+    color: white;
+    /* border-bottom: 1px solid white; */
 }
 </style>
