@@ -1,9 +1,9 @@
 <script setup>
-const language = useLanguage()
+import { useLocalStorage } from '@vueuse/core'
+const language = useLocalStorage('language', useLanguage())
 
 function toggleLanguage(e) {
     language.value = e.currentTarget.innerText
-    console.log(typeof useLanguage().value)
 }
 </script>
 

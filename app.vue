@@ -7,6 +7,8 @@
         <Transition name="fade">
             <MenuMain v-if="menuIsOpen" />
         </Transition>
+
+        <BottomBarMain />
     </div>
 </template>
 

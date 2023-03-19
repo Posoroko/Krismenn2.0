@@ -32,7 +32,8 @@ const language = useLanguage()
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.745);
+    z-index: 10000;
+    background: radial-gradient(circle, rgba(0,0,0,0.33776838372067575) 0%, rgba(0,0,0,0.6626983557094712) 32%, rgba(0,0,0,0.8083566190147934) 67%, rgba(0,0,0,0.886787991563813) 100%);
 }
 .menuBox {
     width: 400px;

@@ -20,9 +20,11 @@ const menuIsOpen = useState('menuIsOpen', () => false)
 <style scoped>
 .topBar {
     height: 5vh;
-    position: fixed;
+    position: absolute;
     top: 0;
-    z-index: 10000;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .topBarTitle, .topBarTitleDecoy{
     font-family: 'avant-garde-gothic-2-bold-1';
