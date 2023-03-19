@@ -1,16 +1,13 @@
 <template>
     <div>
-        <main class="full_screen centered ag-book relative">
-            <NuxtLink to="/bastard">
-                Bastard
-            </NuxtLink>
-
-            <!-- <img src="/images/orange.jpeg" alt="absoluteFull" class="bgImage"> -->
+        <main class="pageMainBox centered ag-book relative">
+            <h1>homepage</h1>
         </main>
     </div>
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>

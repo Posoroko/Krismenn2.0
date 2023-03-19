@@ -12,15 +12,17 @@
 
 @font-face {
     font-family: 'avant-garde-gothic-2-bold-1';
-    src: url('@/assets/fonts/avant-garde-gothic-2-bold-1.otf.ttf');
+    src: url('@/assets/fonts/avant-garde-gothic-2-bold-1.otf');
 }
 
 .icon {
     font-family: 'Material Icons';
+    user-select: none;
 }
 
 * {
     color: white;
+    font-family: 'avant-g-book';
 }
 
 .ag-book {

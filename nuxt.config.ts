@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         '@/assets/css/utility.css',
         '@/assets/css/animations.css'
     ],
-    ssr: true,
+    ssr: false,
     modules: ["nuxt-directus"],
     directus: {
         url: "https://krismenn.monsieuredgar.com",
