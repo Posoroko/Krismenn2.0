@@ -1,5 +1,5 @@
 <template>
-    <div class="siteBox full relative"  :style="{ backgroundImage: `url('/images/${bgImage}')` }">
+    <div class="siteBox full relative">
         <TopBarMain />
         <div class="relative h100">
             <NuxtPage  />
@@ -13,7 +13,6 @@
 </template>
 
 <script setup>
-const bgImage = ref('orange.jpeg')
 const menuIsOpen = useState('menuIsOpen', () => false)
 
 </script>
@@ -34,6 +33,7 @@ const menuIsOpen = useState('menuIsOpen', () => false)
     background-image: ;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 </style>
