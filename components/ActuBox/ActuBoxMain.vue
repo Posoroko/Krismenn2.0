@@ -13,12 +13,12 @@
             
         </div>
 
-        <div class="tabBox">
-            <div class="button flex align-center pointer" @click="actuIsOpen = !actuIsOpen" :class="[actuIsOpen ? 'arrowRight' : 'arrowLeft']">
-                <div class="icon actuArrow" >arrow_back</div>
-                <p class="tabBoxText flex alignCenter">Actualité</p>
-            </div>
+
+        <div class="tabBox flex align-center pointer" @click="actuIsOpen = !actuIsOpen" :class="[actuIsOpen ? 'arrowRight' : 'arrowLeft']">
+            <div class="icon actuArrow" >arrow_back</div>
+            <p class="tabBoxText flex alignCenter">Actualité</p>
         </div>
+
 
         <div class="absolute background"></div>
 
@@ -40,7 +40,7 @@ const fetchOptions = {
 }
 
 const { data: actu } = await useAsyncData(
-    "agenda",
+    "actualite",
     async () => {
         const actu = await $fetch(`${directusItems}Actualite`, fetchOptions)
 
@@ -77,7 +77,6 @@ const { data: actu } = await useAsyncData(
     left: 0;
     transform: translate(0%, -105%);
     transition: 300ms ease;
-    
 }
 .actuBigBox_closed .tabBox {
     position: absolute;
@@ -85,9 +84,8 @@ const { data: actu } = await useAsyncData(
     left: 0;
     transform: translate(-70%, 50%) rotate(90deg);
     transition: 300ms ease;
-    
 }
-.actuBigBox_closed .tabBox .button .icon{
+.actuBigBox_closed .tabBox .icon{
     transform: rotate(-90deg);
     transition: 300ms ease;
 }
