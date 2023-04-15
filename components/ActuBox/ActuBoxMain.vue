@@ -78,6 +78,10 @@ const { data: actu } = await useAsyncData(
     transform: translate(0%, -105%);
     transition: 300ms ease;
 }
+.actuBigBox_open .tabBox .icon{
+    transform: rotate(180deg);
+    transition: 300ms ease;
+}
 .actuBigBox_closed .tabBox {
     position: absolute;
     top: 0;
