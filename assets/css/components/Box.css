@@ -1,0 +1,13 @@
+.boxTitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.boxTitle_left {
+    writing-mode: sideways-lr;
+}
+.boxTitle_right {
+    writing-mode: vertical-rl;
+    
+}

@@ -1,3 +1,3 @@
-export const useMenuIsOpen = () => {
-    return useState<boolean>('menuIsOpen', () => false)
+export const useOpenBox = () => {
+    return useState<string>('openBox', () => "none")
 }

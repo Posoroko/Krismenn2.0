@@ -5,7 +5,8 @@ export default defineNuxtConfig({
         '@/assets/css/main.css',
         '@/assets/css/utility.css',
         '@/assets/css/fonts.css',
-        '@/assets/css/utility.css',
+        '@/assets/css/components/Box.css',
+        '@/assets/css/components/Bar.css',
         '@/assets/css/animations.css'
     ],
     ssr: false,

@@ -9,24 +9,23 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     background-color: black;
 }
 * {
-    user-select: none;
+    /* user-select: none; */
 }
-
-.full_screen {
-    padding: 10px;
-}
-.pageMainBox {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 a {
     cursor: pointer;
+}
+
+.pageMainBox {
+    height: 100%;
+}
+
+/* make containers unclickable because they are stacked and make bars clickable again */
+footer, nav, header {
+    pointer-events: none;
+}
+.bar {
+    pointer-events: all;
 }

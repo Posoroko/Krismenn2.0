@@ -9,7 +9,7 @@ function toggleLanguage(e) {
 
 <template>
     <div class="languageBox flex gap10">
-        <p class="langBtn fr pointer" :class="{ activeLangBtn : language == 'fr'}" @click.stop="toggleLanguage">fr</p>
+        <p class="langBtn fr pointer" :class="{ activeLangBtn: language == 'fr' }" @click.stop="toggleLanguage">fr</p>
 
         <p class="langBtn en pointer" :class="{ activeLangBtn: language == 'en' }" @click.stop="toggleLanguage">en</p>
 

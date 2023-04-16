@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'avant-g-book';
     src: url('@/assets/fonts/avant-g-book.ttf');
@@ -20,9 +20,12 @@
     user-select: none;
 }
 
+.raleway {
+    font-family: 'Raleway', sans-serif;
+    border: 1px solid red;
+}
 * {
     color: white;
-    font-family: 'avant-g-book';
 }
 
 .ag-book {
