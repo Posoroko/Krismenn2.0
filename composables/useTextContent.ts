@@ -1,4 +1,4 @@
-export const useMenuContent = () => {
+export const useTextContent = () => {
     return {
         tabs: {
             agenda: { fr: 'Tournée', en: 'Tour', bzh: 'Troiou' },

@@ -1,16 +1,20 @@
 <template>
     <section>
-        <h2 class="boxTitle" @click="handleTitleClick('about', openBox)">à propos</h2>
+        <h2 class="boxTitle" @click="handleTitleClick('about', openBox)">{{ about[language] }}</h2>
     </section>
 </template>
 
 <script setup>
+import { about } from '@/content/text.js'
+const language = useLanguage()
+console.log(language.value)
+
 const openBox = useState('openBox', () => "none")
 
-const handleTitleClick = (text, openBox) => {
-    console.log(text, openBox)
-    if(text == openBox) {
-        openBox= 'none'
+const handleTitleClick = (text, _openBox) => {
+    console.log(text, _openBox)
+    if(text == _openBox) {
+        _openBox= 'none'
         return
     }
     openBox.value = text
