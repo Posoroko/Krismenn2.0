@@ -1,6 +1,6 @@
 <template>
-    <main class="pageMainBox centered">
-        <p>{{ openBox }}</p>
+    <main class="pageMainBox centered relative">
+        <div class="backgroundImage absolute top0 left0 h100 w100" :class="{ darkenBg: openBox != 'none' }"></div>
     </main>
 </template>
 
@@ -11,13 +11,18 @@ const openBox = useState('openBox', () => "none")
 
 
 <style scoped>
-
-.pageMainBox {
+.backgroundImage {
     background-image: url('/images/bleu-double-doudoune_flat.jpg');
     background-position: center;
     background-size: cover;
+    filter: brightness(1);
+    transition: 300ms ease;
+    z-index: -1;
 }
-
+.darkenBg {
+    filter: brightness(0.5);
+    transition: 300ms ease;
+}
 
 .page-enter-active,
 .page-leave-active {

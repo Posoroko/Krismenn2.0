@@ -1,23 +1,31 @@
+<template>
+    <div class="languageBox flex gap10">
+        <NuxtLink v-for="loc in availableLocales" :key="loc.code" :to="switchLocalePath(loc.code)" class="langBtn pointer"
+            :class="{ activeLangBtn: locale == loc.code }">
+            {{ loc.code }}
+        </NuxtLink>
+    </div>
+</template>
+
 <script setup>
 import { useLocalStorage } from '@vueuse/core'
-const language = useLocalStorage('language', useLanguage())
+import { useI18n, useLocalePath } from '#imports'
+const { locale, locales } = useI18n()
+
+const switchLocalePath = useSwitchLocalePath()
+const availableLocales = computed(() => {
+    return (locales.value).filter(i => i.code !== locale.value)
+})
 
 function toggleLanguage(e) {
     language.value = e.currentTarget.innerText
 }
 </script>
 
-<template>
-    <div class="languageBox flex gap10">
-        <p class="langBtn fr pointer" :class="{ activeLangBtn: language == 'fr' }" @click.stop="toggleLanguage">fr</p>
-
-        <p class="langBtn en pointer" :class="{ activeLangBtn: language == 'en' }" @click.stop="toggleLanguage">en</p>
-
-        <p class="langBtn bzh pointer" :class="{ activeLangBtn: language == 'bzh' }" @click.stop="toggleLanguage">bzh</p>
-    </div>
-</template>
-
 <style scoped>
+.languageBox {
+    padding: 10px;
+}
 .langBtn {
     color: rgb(120, 120, 120);
     font-size: 12px;

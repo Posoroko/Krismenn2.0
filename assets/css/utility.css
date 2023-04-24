@@ -103,3 +103,17 @@
 .weight7 {font-weight: 700;}
 .weight8 {font-weight: 800;}
 .Weight9 {font-weight: 900;}
+
+.noEvents_kidsEvents  {
+    pointer-events: none;
+}
+.noEvents_kidsEvents * {
+    pointer-events: all;
+}
+
+.z0000  { z-index: 0; }
+.z_1000 { z-index: 1000; }
+.z_2000 { z-index: 2000; }
+.z_3000 { z-index: 3000; }
+.z_4000 { z-index: 4000; }
+.z_5000 { z-index: 5000; }

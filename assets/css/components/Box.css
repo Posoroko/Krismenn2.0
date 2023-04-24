@@ -1,13 +1,64 @@
-.boxTitle {
-    font-family: 'Raleway', sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    cursor: pointer;
+.boxTitleFrame {
+    width: 100%;
+    height: var(--bar-thickness);
+    user-select: none;
 }
+.boxTitleFrame .placeholder {
+    width: 30px;
+    height: 100%;
+}
+
+.boxTitleText:hover {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.632);
+    transition: 300ms color ease;
+}
+
+.activeTitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    transition: 300ms ease;
+}
+
 .boxTitle_left {
     writing-mode: sideways-lr;
 }
 .boxTitle_right {
     writing-mode: vertical-rl;
-    
+}
+
+.bottomBox {
+    width: 50%;
+    height: 100%;
+}
+
+
+
+
+
+.bottomDrawerContent {
+    width: 100%;    
+    padding: 25px 50px;
+    border: 3px solid rgba(255, 255, 255, 0.075);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.142);
+}
+
+.drawerContentText {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.812);
+}
+.drawerLink {
+    font-family: 'Raleway', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0px 10px;
+    border-left: 10px solid rgba(0, 0, 0, 0.275);
+    border-bottom: 5px solid rgba(0, 0, 0, 0.275);
+    line-height: 10px;
 }

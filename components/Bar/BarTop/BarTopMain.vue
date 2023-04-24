@@ -1,5 +1,5 @@
 <template>
-    <div class="bar topBar absolute w100 top0 left0 flex alignStart justifyCenter">
+    <div class="topBar r">
         <WidgetKrismennMain />
     </div>
 </template>
@@ -9,5 +9,12 @@
 </script>
 
 <style scoped>
-
+.topBar {
+    width: calc(100% - (2 * var(--bar-thickness)));
+    height: var(--bar-thickness);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 var(--bar-thickness);
+}
 </style>

@@ -10,7 +10,44 @@ export default defineNuxtConfig({
         '@/assets/css/animations.css'
     ],
     ssr: false,
-    modules: ["nuxt-directus"],
+    modules: [
+        "nuxt-directus",
+        "@nuxtjs/i18n"
+    ],
+    i18n: {
+        baseUrl: 'https://krismenn.netlify.app',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'kouingig',
+            redirectOn: 'root',  // recommended
+        },
+        strategy: 'prefix',
+        defaultLocale: 'en',
+        locale: 'En',
+        locales: [
+            {
+                code: 'en',
+                name: 'English',
+                iso: 'en-US',
+            },
+            {
+                code: 'fr',
+                name: 'Français',
+                iso: 'fr-FR',
+            },
+            {
+                code: 'bzh',
+                name: 'Brezhoneg',
+                iso: 'bzh-BZH',
+            },
+        ],
+        customRoutes: 'config',
+        vueI18nLoader : true,
+        pages: {
+            home: { en: '/', fr: '/', bzh: '/' },
+            about: { en: '/about', fr: '/a-propos', bzh: '/diwar-benn' },
+        }
+    },
     directus: {
         url: "https://krismenn.monsieuredgar.com",
     },
