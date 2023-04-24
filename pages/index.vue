@@ -1,11 +1,12 @@
 <template>
     <main class="pageMainBox centered relative">
+        <p>{{ openBox }}</p>
         <div class="backgroundImage absolute top0 left0 h100 w100" :class="{ darkenBg: openBox != 'none' }"></div>
     </main>
 </template>
 
 <script setup>
-const openBox = useState('openBox', () => "none")
+const openBox = useState('openDrawer', () => "none")
 
 </script>
 

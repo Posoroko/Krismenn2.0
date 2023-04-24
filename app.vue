@@ -5,10 +5,18 @@
         </div>
         
 
-        <nav class="absolute w100 h100 top0 left0 noEvents_kidsEvents ">
+        <nav class="absolute full top0 left0 noEvents_kidsEvents ">
             <BarTopMain />
-            <BarMain barPosition="barPosition_left">
+            <BarMain barPosition="bar_left">
                 <BarContentLeft />
+            </BarMain>
+
+            <BarMain barPosition="bar_right">
+                <BarContentRight />
+            </BarMain>
+
+            <BarMain barPosition="bar_bottom">
+                <BarContentBottom />
             </BarMain>
         </nav>
 

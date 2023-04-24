@@ -8,32 +8,13 @@
     align-items: center;
 }
 
-.bar.barPosition_left .barContent,
-.bar.barPosition_right .barContent {
+.bar.bar_left .barContent,
+.bar.bar_right .barContent {
     flex-direction: column;
 }
 
 .barContent .tabBox {
     flex-grow: 1;
 }
-.tabBox.barPosition_left,
-.tabBox.barPosition_right {
-    width: 100%;
-    flex-direction: row-reverse;
-}
 
-.tabTitle.barPosition_left {
-    writing-mode: sideways-lr;
-}
 
-/* .tabTitle.barPosition_left {
-    height: 100%;
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.481);
-    filter: blur(0.4px);
-    transition: 300ms color ease;
-
-} */

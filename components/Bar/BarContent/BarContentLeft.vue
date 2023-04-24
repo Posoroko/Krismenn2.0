@@ -1,10 +1,14 @@
 <template>
-    <div class="barContent full r">
-        <DrawerMain drawerTitle="teams" barPosition="barPosition_left">
+    <div class="barContent full">
+        <DrawerMain drawerTitle="bastard" barPosition="bar_left" drawerPosition="drawer_top">
+            
+        </DrawerMain>
+
+        <DrawerMain drawerTitle="teams" barPosition="bar_left" drawerPosition="drawer_middle">
 
         </DrawerMain>
 
-        <DrawerMain drawerTitle="projects" barPosition="barPosition_left">
+        <DrawerMain drawerTitle="projects" barPosition="bar_left" drawerPosition="drawer_bottom">
 
         </DrawerMain>
     </div>

@@ -1,5 +1,5 @@
 <template>
-       <div class="bar noEvents_kidsEvents " :class="barPosition">
+       <div class="bar noEvents_kidsEvents" :class="barPosition">
         <slot></slot>
     </div>
 </template>
@@ -19,31 +19,31 @@ const props = defineProps({
 .bar {
     position: absolute;
 }
-.barPosition_bottom, 
-.barPosition_left, 
-.barPosition_right {
+.bar.bar_left, 
+.bar.barPosition_right {
     margin: 0 var(--bar-thickness);
 }
 
 
-.barPosition_left, 
-.barPosition_right {
+.bar.bar_left, 
+.bar.bar_right {
     width: var(--bar-thickness);
     height: calc(100% - (2 * var(--bar-thickness)));
     margin: var(--bar-thickness) 0;
     top: 0;
 }
 
-.barPosition_left {
+.bar.bar_left {
     left: 0;
 }
-.barPosition_right {
+.bar.bar_right {
     right: 0;
 }
-.barPosition_bottom {
+.bar.bar_bottom {
     height: var(--bar-thickness);
     width: calc(100% - (2 * var(--bar-thickness)));
     left: 0;
     bottom: 0;
+    margin: 0 var(--bar-thickness);
 }
 </style>
