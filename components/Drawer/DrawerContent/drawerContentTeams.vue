@@ -1,5 +1,5 @@
 <template>
-    <div class="bottomDrawerContent relative flex column gap20">
+    <div class="drawerContent relative flex column gap20">
         <p class="drawerContentText">
             Krismenn est un mec cool qui chante du kan ha diskan, mais qui fait aussi du beatbox.
             Il aime couper des arbres et faire du feu pour cuire des saussices. Sa couleur préférée est le marron
@@ -23,4 +23,11 @@ const aboutLink = {
     fr: 'en savoir plus...',
     bzh: 'gouzout hiroc\'h...'
 }
+</script>
+
+<script setup>
+.drawerContent {
+    w100
+}
+
 </script>

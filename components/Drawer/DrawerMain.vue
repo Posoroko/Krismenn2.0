@@ -4,9 +4,9 @@
             <h2 class="tabTitle pointer" :class="barPosition" @click="handleClick">{{ drawerTitle }}</h2>
         </div>
 
-        <div class="drawerBox absoluteFull flex g noEvents_kidsEvents" :class="[barPosition]">
-            <div class="drawer r" :class="[ drawerPosition, barPosition, { open: openDrawer == drawerTitle }, drawerState]">
-                <slot></slot>
+        <div class="drawerBox absoluteFull" :class="[barPosition]">
+            <div class="drawer absolute" :class="[ drawerPosition, barPosition, { open: openDrawer == drawerTitle }, drawerState]">
+                hello
             </div>
         </div>
     </div>
@@ -41,59 +41,58 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.drawer.bar_left, .drawer.bar_right {
-    width: min(500px, calc(100vw - (2 * var(--bar-thickness)) ));
-    height: 700px;
-}
-.drawer.bar_bottom {
-    width: 400px;
-    height: 300px;
-}
 .drawerBox {
     pointer-events: none;
 }
 .drawerBox * {
     pointer-events: all;
 }
-.drawerBox.bar_left, .drawerBox.bar_right {
-    flex-direction: column;
+.drawer {
+    width: min(500px, calc(100vw - (2 * var(--bar-thickness))));
+    height: min(500px, calc(100vh - (2 * var(--bar-thickness))));
+    backdrop-filter: blur(10px);
+}
+.drawer.bar_left { left: 100%; }
+.drawer.bar_right { right: 100%; }
+
+
+.drawer.drawer_top { top: 0%; }
+.drawer.drawer_middle { top: 50%; }
+.drawer.drawer_bottom { bottom: 0%; }
+
+
+
+.drawer.bar_left.drawer_top.closed, .drawer.bar_left.drawer_bottom.closed {
+    transform: translateX(calc(-100% - var(--bar-thickness)));
+    transition:  var(--drawer-transition);
+}
+.drawer.bar_left.drawer_top.open, .drawer.bar_left.drawer_bottom.open {
+    transform: translateX(0px);
+    transition: var(--drawer-transition);
+}
+.drawer.bar_left.drawer_middle.closed {
+    transform: translate(calc(-100% - var(--bar-thickness)), -50%);
+    transition: var(--drawer-transition);
+}
+.drawer.bar_left.drawer_middle.open {
+    transform: translate(0px, -50%);
+    transition: var(--drawer-transition);
 }
 
-/* drawer left */
-
-.drawer.bar_left.closed {
-    transform: translateX(-100%);
-    transition: 300ms ease;
+.drawer.bar_right.drawer_top.closed, .drawer.bar_right.drawer_bottom.closed {
+    transform: translateX(calc(100% + var(--bar-thickness)));
+    transition: var(--drawer-transition);
 }
-.drawer.bar_left.open {
-    transform: translateX(var(--bar-thickness));
-    transition: 300ms ease;
+.drawer.bar_right.drawer_top.open, .drawer.bar_right.drawer_bottom.open {
+    transform: translateX(0px);
+    transition: var(--drawer-transition);
 }
-
-/* drawer right */
-
-.drawer.bar_right.closed {
-    transform: translateX(var(--bar-thickness));
-    transition: 300ms ease;
+.drawer.bar_right.drawer_middle.closed {
+    transform: translate(calc(100% + var(--bar-thickness)), -50%);
+    transition: var(--drawer-transition);
 }
-.drawer.bar_right.open {
-    transform: translateX(-100%);
-    transition: 300ms ease;
+.drawer.bar_right.drawer_middle.open {
+    transform: translate(0px, -50%);
+    transition: var(--drawer-transition);
 }
-
-
-
-/* drawer bottom */
-
-.drawer.bar_bottom.closed {
-    transform: translateY(var(--bar-thickness));
-    transition: 300ms ease;
-}
-.drawer.bar_bottom.open {
-    transform: translateY(-100%);
-    transition: 300ms ease;
-}
-
-
-
 </style>

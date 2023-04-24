@@ -10,8 +10,8 @@
         </div>
 
         <div class="absolute top0 right0">
-                <DrawerCloseButton />
-            </div>
+            <DrawerCloseButton />
+        </div>
     </div>
 </template>
 <script setup>
