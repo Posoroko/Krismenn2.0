@@ -5,4 +5,12 @@
 </template>
 
 <script setup>
+
+const { locale, t } = useI18n()
+const localePath = useLocalePath()
+const appConfig = useAppConfig()
+const directusAssets = appConfig.directus.assets;
+const directusItems = appConfig.directus.items;
+
+
 </script>

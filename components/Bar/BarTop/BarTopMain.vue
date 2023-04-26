@@ -1,5 +1,5 @@
 <template>
-    <div class="topBar r">
+    <div class="topBar">
         <WidgetKrismennMain />
     </div>
 </template>

@@ -1,22 +1,44 @@
 <template>
-    <div class="drawerContent relative flex column gap20">
-        <p class="drawerContentText">
-            Krismenn est un mec cool qui chante du kan ha diskan, mais qui fait aussi du beatbox.
-            Il aime couper des arbres et faire du feu pour cuire des saussices. Sa couleur préférée est le marron
-            et même s'il a l'air d'un hippie, il aime jouer de la musique avec des instrument électroniques
-        </p>
-        <div class="flex justifyEnd">
-            <NuxtLink class="drawerLink" :to="localePath({ name: 'about' })">{{ aboutLink[locale] }}</NuxtLink>
-        </div>
+    <div class="drawerContentBox h100 relative flex column">
+            <div class="topBar absolute top0 right0 flex justifyEnd">
+                <DrawerCloseButton />
+            </div>
 
-        <div class="absolute top0 right0">
-            <DrawerCloseButton />
+            <div class="box flex column alignCenter justifyCenter gap10">
+                <article class="teamBox w100 flex column justifyCenter alignCenter r" v-for="team in teams" :key="team.id">
+                    <h3>{{ team.name }}</h3>
+                    
+                    <p>
+                        {{ team.definition }}
+                    </p>
+                </article>  
+            </div>
         </div>
-    </div>
 </template>
 <script setup>
 const { locale, t } = useI18n()
 const localePath = useLocalePath()
+const appConfig = useAppConfig()
+const directusAssets = appConfig.directus.assets;
+const directusItems = appConfig.directus.items;
+
+const { getItems } = useDirectusItems();
+
+const { data: teams } = await useAsyncData(
+    "teams",
+    async () => {
+        const items = await getItems({ 
+            collection: "Teams",
+            params:  {
+                fields: ["id", "name", "definition", "description", "image", "link", "teammates.*"],
+            }
+        })
+        return items
+    }
+    ,
+    { server: true }
+)
+
 
 const aboutLink = {
     en: 'read more...',
@@ -25,9 +47,5 @@ const aboutLink = {
 }
 </script>
 
-<script setup>
-.drawerContent {
-    w100
-}
-
-</script>
+<style scoped>
+</style>

@@ -1,14 +1,14 @@
 <template> 
     <span class="drawerCloseButton centered">
         <span class="icon drawerCloseIcon" 
-            @click="openBox = 'none'">
+            @click="openDrawer = 'none'">
             close
         </span>
     </span>
 </template>
 
 <script setup>
-const openBox = useState('openBox', () => "none")
+const openDrawer = useState('openDrawer', () => "none")
 
 </script>
 
